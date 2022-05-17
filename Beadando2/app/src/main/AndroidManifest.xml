@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Beadando2">
         <activity
+            android:name=".SensorActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
