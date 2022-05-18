@@ -10,10 +10,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.beadando2.Room.RoomActivity;
+import com.example.beadando2.Worker.WorkerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button sensorButton, roomButton;
+    Button sensorButton, roomButton, workerButton;
 
     MyLifeCycleObserver myLifeCycleObserver;
     Lifecycle lifecycle;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         sensorButton = findViewById(R.id.buttonToSensor);
         roomButton = findViewById(R.id.buttonToRoom);
+        workerButton = findViewById(R.id.buttonToWorker);
 
         sensorButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent toRoom = new Intent(MainActivity.this, RoomActivity.class);
                 startActivity(toRoom);
+            }
+        });
+
+        workerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toWorker = new Intent(MainActivity.this, WorkerActivity.class);
+                startActivity(toWorker);
             }
         });
     }
